@@ -1,0 +1,286 @@
+/* Importa la fuente de Google - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Aplica estilos generales a todos los elementos */
+* {
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el relleno predeterminado */
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total del elemento */
+  font-family: "Poppins", sans-serif; /* Aplica la fuente Poppins a todo el texto */
+}
+
+/* Estilo para el fondo del cuerpo de la página */
+body {
+  background: #E3F2FD; /* Establece un color de fondo azul claro */
+}
+
+/* Estilos para el ícono del chatbot */
+.chatbot-icon {
+    width: 50px; /* Define el ancho del ícono */
+    height: 50px; /* Define la altura del ícono */
+    border-radius: 50%; /* Da una forma circular al ícono */
+    margin-right: 10px; /* Espacio a la derecha del ícono */
+}
+
+/* Estilo para el botón de activación del chatbot */
+.chatbot-toggler {
+  position: fixed; /* Fija el botón en una posición específica en la pantalla */
+  bottom: 30px; /* Distancia desde el fondo de la ventana */
+  right: 35px; /* Distancia desde el borde derecho de la ventana */
+  outline: none; /* Elimina el contorno predeterminado del botón */
+  border: none; /* Elimina el borde predeterminado */
+  height: 50px; /* Define la altura del botón */
+  width: 50px; /* Define el ancho del botón */
+  display: flex; /* Utiliza flexbox para centrar el contenido */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  border-radius: 50%; /* Da una forma circular al botón */
+  background: #191e3f; /* Establece un color de fondo oscuro */
+  transition: all 0.2s ease; /* Transición suave para los cambios */
+}
+
+/* Estilo para el botón del chatbot cuando está activo */
+body.show-chatbot .chatbot-toggler {
+  transform: rotate(90deg); /* Rota el botón cuando el chatbot está abierto */
+}
+
+/* Estilo para el texto dentro del botón del chatbot */
+.chatbot-toggler span {
+  color: #fff; /* Establece el color del texto en blanco */
+  position: absolute; /* Posiciona el texto de manera absoluta */
+}
+
+/* Oculta el primer y último span cuando el chatbot está abierto */
+.chatbot-toggler span:last-child,
+body.show-chatbot .chatbot-toggler span:first-child {
+  opacity: 0; /* Hace el texto invisible */
+}
+
+/* Muestra el último span cuando el chatbot está abierto */
+body.show-chatbot .chatbot-toggler span:last-child {
+  opacity: 1; /* Hace el texto visible */
+}
+
+/* Estilo para el contenedor del chatbot */
+.chatbot {
+  position: fixed; /* Fija el chatbot en una posición específica en la pantalla */
+  right: 35px; /* Distancia desde el borde derecho de la ventana */
+  bottom: 90px; /* Distancia desde el fondo de la ventana */
+  width: 420px; /* Define el ancho del chatbot */
+  background: #fff; /* Establece un color de fondo blanco */
+  border-radius: 15px; /* Da bordes redondeados al chatbot */
+  overflow: hidden; /* Oculta el contenido desbordado */
+  opacity: 0; /* Hace el chatbot invisible por defecto */
+  pointer-events: none; /* Desactiva la interacción con el chatbot */
+  transform: scale(0.5); /* Reduce el tamaño del chatbot por defecto */
+  transform-origin: bottom right; /* Define el punto de origen para la transformación */
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), /* Sombra difusa alrededor del chatbot */
+              0 32px 64px -48px rgba(0,0,0,0.5); /* Sombra más pronunciada */
+  transition: all 0.1s ease; /* Transición suave para los cambios */
+}
+
+/* Estilo para el chatbot cuando está abierto */
+body.show-chatbot .chatbot {
+  opacity: 1; /* Hace el chatbot visible */
+  pointer-events: auto; /* Permite la interacción con el chatbot */
+  transform: scale(1); /* Restaura el tamaño del chatbot */
+}
+
+/* Estilo para el encabezado del chatbot */
+.chatbot header {
+  padding: 16px 0; /* Añade relleno en la parte superior e inferior */
+  position: relative; /* Posiciona el encabezado de manera relativa */
+  text-align: center; /* Centra el texto dentro del encabezado */
+  color: #fff; /* Establece el color del texto en blanco */
+  background: #191e3f; /* Establece un color de fondo oscuro */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave alrededor del encabezado */
+}
+
+/* Estilo para el icono de cerrar en el encabezado del chatbot */
+.chatbot header span {
+  position: absolute; /* Posiciona el icono de cerrar de manera absoluta */
+  right: 15px; /* Distancia desde el borde derecho del encabezado */
+  top: 50%; /* Posiciona verticalmente en el centro del encabezado */
+  display: none; /* Oculta el icono por defecto */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+  transform: translateY(-50%); /* Ajusta la posición vertical del icono */
+}
+
+/* Estilo para el título del chatbot */
+header h2 {
+  font-size: 1.4rem; /* Define el tamaño de fuente del título */
+}
+
+/* Estilo para el área de chat dentro del chatbot */
+.chatbot .chatbox {
+  overflow-y: auto; /* Habilita el desplazamiento vertical */
+  height: 510px; /* Define la altura del área de chat */
+  padding: 30px 20px 100px; /* Añade relleno dentro del área de chat */
+}
+
+/* Estilo para la barra de desplazamiento en el área de chat */
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+  width: 6px; /* Define el ancho de la barra de desplazamiento */
+}
+
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+  background: #fff; /* Color de fondo de la pista de desplazamiento */
+  border-radius: 25px; /* Bordes redondeados de la pista de desplazamiento */
+}
+
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+  background: #ccc; /* Color de la parte movible de la barra de desplazamiento */
+  border-radius: 25px; /* Bordes redondeados de la parte movible */
+}
+
+/* Estilo para los mensajes de chat */
+.chatbox .chat {
+  display: flex; /* Utiliza flexbox para alinear los mensajes */
+  list-style: none; /* Elimina los puntos de la lista */
+}
+
+.chatbox .outgoing {
+  margin: 20px 0; /* Añade margen superior e inferior a los mensajes salientes */
+  justify-content: flex-end; /* Alinea los mensajes salientes al final */
+}
+
+.chatbox .incoming span {
+  width: 32px; /* Define el ancho del icono del remitente */
+  height: 32px; /* Define la altura del icono del remitente */
+  color: #fff; /* Establece el color del texto en blanco */
+  cursor: default; /* Mantiene el cursor por defecto */
+  text-align: center; /* Centra el texto dentro del icono */
+  line-height: 32px; /* Ajusta la altura de la línea para centrar el texto verticalmente */
+  align-self: flex-end; /* Alinea el icono al final del contenedor */
+  background: #191e3f; /* Establece un color de fondo oscuro para el icono */
+  border-radius: 4px; /* Da bordes redondeados al icono */
+  margin: 0 10px 7px 0; /* Añade margen alrededor del icono */
+}
+
+/* Estilo para los mensajes de chat */
+.chatbox .chat p {
+  white-space: pre-wrap; /* Permite el salto de línea y preserva los espacios en blanco */
+  padding: 12px 16px; /* Añade relleno alrededor del texto del mensaje */
+  border-radius: 10px 10px 0 10px; /* Da bordes redondeados a los mensajes */
+  max-width: 75%; /* Limita el ancho máximo del mensaje */
+  color: #fff; /* Establece el color del texto en blanco */
+  font-size: 0.95rem; /* Define el tamaño de fuente del mensaje */
+  background: #191e3f; /* Establece un color de fondo oscuro para el mensaje */
+}
+
+/* Estilo para los mensajes entrantes */
+.chatbox .incoming p {
+  border-radius: 10px 10px 10px 0; /* Da bordes redondeados a los mensajes entrantes */
+}
+
+/* Estilo para los mensajes de error */
+.chatbox .chat p.error {
+  color: #721c24; /* Color del texto para mensajes de error */
+  background: #f8d7da; /* Color de fondo para mensajes de error */
+}
+
+/* Estilo para los mensajes entrantes */
+.chatbox .incoming p {
+  color: #000; /* Color del texto para mensajes entrantes */
+  background: #f2f2f2; /* Color de fondo para mensajes entrantes */
+}
+
+/* Estilo para el área de entrada de texto del chatbot */
+.chatbot .chat-input {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  gap: 5px; /* Añade espacio entre los elementos */
+  position: absolute; /* Posiciona el área de entrada de texto de manera absoluta */
+  bottom: 0; /* Alinea el área de entrada al fondo del chatbot */
+  width: 100%; /* Define el ancho del área de entrada al 100% */
+  background: #fff; /* Establece un color de fondo blanco */
+  padding: 3px 20px; /* Añade relleno alrededor del área de entrada */
+  border-top: 1px solid #ddd; /* Añade una línea de borde superior */
+}
+
+/* Estilo para el área de texto dentro de la entrada del chatbot */
+.chat-input textarea {
+  height: 55px; /* Define la altura del área de texto */
+  width: 100%; /* Define el ancho del área de texto al 100% */
+  border: none; /* Elimina el borde del área de texto */
+  outline: none; /* Elimina el contorno del área de texto */
+  resize: none; /* Desactiva el redimensionamiento del área de texto */
+  max-height: 180px; /* Define la altura máxima del área de texto */
+  padding: 15px 15px 15px 0; /* Añade relleno alrededor del área de texto */
+  font-size: 0.95rem; /* Define el tamaño de fuente del área de texto */
+}
+
+/* Estilo para el botón de enviar en el área de entrada del chatbot */
+.chat-input span {
+  align-self: flex-end; /* Alinea el botón al final del contenedor */
+  color: #191e3f; /* Establece el color del texto en el botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  height: 55px; /* Define la altura del botón */
+  display: flex; /* Utiliza flexbox para alinear el contenido del botón */
+  align-items: center; /* Centra el contenido verticalmente */
+  visibility: hidden; /* Oculta el botón por defecto */
+  font-size: 1.35rem; /* Define el tamaño de fuente del botón */
+}
+
+/* Muestra el botón de enviar cuando el área de texto tiene contenido válido */
+.chat-input textarea:valid ~ span {
+  visibility: visible; /* Hace el botón visible */
+}
+
+/* Estilo para el contenedor de botones */
+.button-container {
+  display: flex; /* Utiliza flexbox para alinear los botones */
+  flex-direction: column; /* Alinea los botones en una columna */
+  margin-top: 10px; /* Añade margen superior al contenedor */
+}
+
+/* Estilo para las opciones de botón dentro del contenedor */
+.button-option {
+  border: none; /* Elimina el borde del botón */
+  background: #191e3f; /* Establece un color de fondo oscuro */
+  color: #fff; /* Establece el color del texto en blanco */
+  padding: 10px; /* Añade relleno alrededor del texto del botón */
+  border-radius: 5px; /* Da bordes redondeados al botón */
+  margin-bottom: 5px; /* Añade margen inferior entre los botones */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 0.95rem; /* Define el tamaño de fuente del botón */
+}
+
+/* Cambia el color de fondo del botón cuando se pasa el cursor sobre él */
+.button-option:hover {
+  background: #191e3f; /* Mantiene el color de fondo oscuro al pasar el cursor */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 490px) {
+  /* Ajusta la posición del botón de activación en pantallas pequeñas */
+  .chatbot-toggler {
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    bottom: 20px; /* Ajusta la distancia desde el fondo */
+  }
+
+  /* Ajusta el tamaño y la posición del chatbot en pantallas pequeñas */
+  .chatbot {
+    right: 0; /* Ajusta la distancia desde el borde derecho */
+    bottom: 0; /* Ajusta la distancia desde el fondo */
+    height: 100%; /* Ajusta la altura al 100% de la pantalla */
+    border-radius: 0; /* Elimina los bordes redondeados */
+    width: 100%; /* Ajusta el ancho al 100% de la pantalla */
+  }
+
+  /* Ajusta el tamaño y el relleno del área de chat en pantallas pequeñas */
+  .chatbot .chatbox {
+    height: 90%; /* Ajusta la altura al 90% del chatbot */
+    padding: 25px 15px 100px; /* Ajusta el relleno dentro del área de chat */
+  }
+
+  /* Ajusta el tamaño y el relleno del área de entrada de texto en pantallas pequeñas */
+  .chatbot .chat-input {
+    padding: 5px 15px; /* Ajusta el relleno alrededor del área de entrada */
+  }
+
+  /* Muestra el icono de cerrar en el encabezado del chatbot en pantallas pequeñas */
+  .chatbot header span {
+    display: block; /* Muestra el icono de cerrar */
+  }
+}
