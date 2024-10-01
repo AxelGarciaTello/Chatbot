@@ -62,6 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+
+
+
+    
     // Asignar eventos al botón de enviar y al área de entrada
     sendChatBtn.addEventListener("click", handleUserNameInput);
     chatInput.addEventListener("keydown", (event) => {

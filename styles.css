@@ -232,6 +232,7 @@ header h2 {
   display: flex; /* Utiliza flexbox para alinear los botones */
   flex-direction: column; /* Alinea los botones en una columna */
   margin-top: 10px; /* Añade margen superior al contenedor */
+  position: relative; /* Cambia a posición relativa */
 }
 
 /* Estilo para las opciones de botón dentro del contenedor */
@@ -244,11 +245,13 @@ header h2 {
   margin-bottom: 5px; /* Añade margen inferior entre los botones */
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   font-size: 0.95rem; /* Define el tamaño de fuente del botón */
+  max-width: 90%; /* Limita el ancho máximo del botón */
+  align-self: center; /* Centra el botón horizontalmente */
 }
 
 /* Cambia el color de fondo del botón cuando se pasa el cursor sobre él */
 .button-option:hover {
-  background: #191e3f; /* Mantiene el color de fondo oscuro al pasar el cursor */
+  background: #1f233b; /* Cambia el color ligeramente para el efecto hover */
 }
 
 /* Estilos para pantallas pequeñas */
@@ -268,11 +271,24 @@ header h2 {
     width: 100%; /* Ajusta el ancho al 100% de la pantalla */
   }
 
-  /* Ajusta el tamaño y el relleno del área de chat en pantallas pequeñas */
-  .chatbot .chatbox {
-    height: 90%; /* Ajusta la altura al 90% del chatbot */
-    padding: 25px 15px 100px; /* Ajusta el relleno dentro del área de chat */
-  }
+  /* Estilo para el área de chat dentro del chatbot */
+.chatbot .chatbox {
+  overflow-y: auto; /* Habilita el desplazamiento vertical */
+  height: 480px; /* Define la altura del área de chat */
+  padding: 20px; /* Relleno para la parte superior */
+  display: flex; /* Utiliza flexbox para alinear elementos */
+  flex-direction: column; /* Alinea mensajes y botones verticalmente */
+}
+
+/* Estilo para el contenedor de botones */
+.button-container {
+  margin-top: auto; /* Empuja los botones hacia abajo */
+}
+
+/* Estilo para las opciones de botón dentro del contenedor */
+.button-option {
+  /* Otros estilos permanecen igual */
+}
 
   /* Ajusta el tamaño y el relleno del área de entrada de texto en pantallas pequeñas */
   .chatbot .chat-input {

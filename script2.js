@@ -23,8 +23,9 @@ window.initializeOptions = () => {
         return chatLi;
     };
 
+    
     const showOptions = () => {
-        const optionsText = "Selecciona una opción:";
+        const optionsText = "Selecciona una opción: <BR>";
         const buttons = [
             { text: "SERVICIOS", action: () => handleUserInput('1') },
             { text: "INVESTIGACIONES", action: () => handleUserInput('2') },
@@ -180,8 +181,8 @@ case 73:
 
 
     case 11:
-        response = `Aquí tienes la información sobre nuestros servicios. <br>
-                    <a href="CHATBOOT/Brochure Arrenda Protect 2024.pdf" target="_blank">Descargar PDF</a>`;
+        response = `Aquí tienes la información sobre nuestros servicios. 
+                    <a href="CHATBOOT/Brochure Arrenda Protect 2024.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"></a>`;
         buttons = [
             { text: "Regresar", action: () => handleUserInput('1') }
         ];
@@ -189,7 +190,7 @@ case 73:
     
     case 12:
         response = `Aquí tienes la imagen con los costos de nuestros servicios. <br>
-                    <a href="CHATBOOT/Lista de Servicios Arrenda Protect.pdf" target="_blank">Descargar PDF</a>`;
+                    <a href="CHATBOOT/Lista de Servicios Arrenda Protect.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"></a>`;
         buttons = [
             { text: "Regresar", action: () => handleUserInput('1') }
         ];
@@ -197,7 +198,7 @@ case 73:
     
     case 13:
         response = `Aquí tienes las coberturas legales de nuestras pólizas jurídicas. <br>
-                    <a href="CHATBOOT/Coberturas Arrrenda Protect.pdf" target="_blank">Descargar PDF</a>`;
+                    <a href="CHATBOOT/Coberturas Arrrenda Protect.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"></a>`;
         buttons = [
             { text: "Regresar", action: () => handleUserInput('1') }
         ];
@@ -233,84 +234,84 @@ case 73:
         break;
     
     case 21:
-        response = `Todos la información y documentos que recibimos son utilizados estrictamente para los procesos de otorgamiento de nuestros servicios y están resguardados bajo nuestro aviso de privacidad que puedes consultar en <a href="CHATBOOT/AVISO DE PRIVACIDAD ARRENDA PROTECT.pdf" target="_blank">Aviso de Privacidad</a>.`;
+        response = `Todos la información y documentos que recibimos son utilizados estrictamente para los procesos de otorgamiento de nuestros servicios y están resguardados bajo nuestro aviso de privacidad que puedes consultar en <a href="CHATBOOT/AVISO DE PRIVACIDAD ARRENDA PROTECT.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"></a>.`;
         buttons = [
             { text: "Regresar", action: () => handleUserInput('2') }
         ];
         break;
     
     case 22:
-        response = "En la validación de la identidad del prospecto y su fiador u obligado solidario (si los tuviese) así como la validación de los documentos de los mismos.";
+        response = "En la validación de la identidad del prospecto y su fiador u obligado solidario (si los tuviese) así como la validación de su solvencia económica, moral y jurídica. Lo cual se determinará mediante la investigación que Arrenda Protect realice ante diversas sociedades publicas o privadas a nivel nacional e internacional";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('2') }
         ];
         break;
     
     case 23:
-        response = "Contamos con pólizas jurídicas que garantizan el proceso de recuperación de tu inmueble con costo adicional. Consulta nuestro catálogo.";
+        response = "El anticipo recibido se tomará a cuenta del precio final de la poliza siempre que el reporte de investigación se emita en sentido “Viable”, para el caso de los reportes con resultado “No Viable” el anticipo recibido no será reembolsable por ser utilizado para los gastos de investigación del proceso, puesto que todas las validaciones que realizamos son a través de plataforma de pago.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('2') }
         ];
         break;
     
     case 24:
-        response = "Sí, contamos con garantías y seguros que garantizan el pago de rentas.";
+        response = "Las llamadas a las referencias son parte de nuestro proceso de investigación y tienen como finalidad la verificación de los datos generales recibidos en la solicitud del prospecto. Así como contar con datos de contacto familiares o personales en caso de una emergencia.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('2') }
         ];
         break;
     
     case 25:
-        response = "El trámite puede durar entre 24 y 72 horas hábiles dependiendo de la disponibilidad de la información y el tipo de servicio solicitado.";
+        response = "Para iniciar con un trámite el primer paso es la integración del expediente, una vez completado se realiza la investigación y al tener el reporte se procede a elaborar el contrato; en cuanto las partes den visto bueno del mismo se agenda la cita de firma.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('2') }
         ];
         break;
     
     case 26:
-        response = "Para la firma de contrato se puede hacer de manera presencial o digital. La firma digital se realiza a través de nuestra plataforma electrónica.";
+        response = "Al adquirir una póliza jurídica de arrendamiento, obtienes una serie de beneficios que brindan seguridad y tranquilidad tanto para el arrendador como para el arrendatario.<br>*Prevención de riesgos <br>*Contratos seguros y personalizados <br>*Mediación para solución de controversias <br>*Cobertura legal ante incumplimiento de la contraparte <br>";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('2') }
         ];
         break;
     
     case 27:
-        response = "Estamos disponibles de lunes a viernes de 9:00 a 18:00 horas, y los sábados de 9:00 a 14:00 horas.";
+        response = "Si tienes dudas sobre tu proceso de investigación comunícate por whats app a Línea Protect (55 3208 3575), nuestra linea de atención a clientes, ahí te canalizarán al área de investigaciones.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('2') }
         ];
         break;
     
     case 31:
-        response = "Para realizar un reporte, contacta a nuestro equipo a través del <a href='mailto:reportes@example.com'>correo electrónico</a> o por teléfono al (55) 5555-5555.";
+        response = "Comunícate por whats app a Línea Protect (55 3208 3575), nuestra linea de atención a clientes, ahí tomarán tu reporte y te mantendrán al tanto de las actualizaciones correspondientes";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('3') }
         ];
         break;
     
     case 32:
-        response = "En caso de que tu inquilino no pague la renta, por favor comunícate con nosotros para iniciar el proceso de cobranza.";
+        response = "Lo primero que debes hacer si se venció el día de pago y no recibiste el depósito, es contactarlo para validar que se encuentre bien y que no lo haya olvidado. Una vez que confirmes esto solicitarle la razón de su retraso de pago y fecha de liquidación. <br>En caso de que no te responda a las llamadas, mensajes y correos o se niegue a darte una fecha de pago deberás reportar el incumplimiento. <br> Comunícate por whats app a Línea Protect (55 3208 3575), nuestra linea de atención a clientes, ahí tomarán tu reporte y te mantendrán al tanto de las actualizaciones correspondientes";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('3') }
         ];
         break;
     
     case 33:
-        response = "Si tu propietario no responde y el inmueble presenta fallas, te ayudaremos a gestionar una solución a través de nuestros canales de atención.";
+        response = "Es muy importante que no te esperes hasta el último momento para reportar una controversia de tu arrendamiento con nosotros. Comunícate por whats app a Línea Protect (55 3208 3575), nuestra linea de atención a clientes. Te canalizaran al área correspondiente para gestionar los procesos de entrega de tu inmueble.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('3') }
         ];
         break;
     
     case 34:
-        response = "Si el inquilino no se quiere salir del inmueble, podemos iniciar el proceso legal para la recuperación del mismo.";
+        response = "Es muy importante que no te esperes hasta el último momento para reportar una controversia de tu arrendamiento con nosotros. Comunícate por whats app a Línea Protect (55 3208 3575), nuestra linea de atención a clientes. Te canalizaran al área correspondiente para gestionar los procesos de entrega de tu inmueble.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('3') }
         ];
         break;
     
     case 35:
-        response = "Puedes comunicarte con nosotros a través de nuestro <a href='mailto:support@example.com'>correo electrónico</a> o llamarnos al (55) 5555-5555.";
+        response = "Whatsapp <br> 55 3208 3575 Línea Protect (linea de atención a clientes) <br> 55 7331 6554 Línea de renovaciones <br> Tambien puedes llamar a nuestras oficinas <br> 55 9047 2157 CDMX y Área Metropolitana<br> 442 728 0189 Querétaro";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('3') }
         ];
@@ -318,63 +319,63 @@ case 73:
     
     case 41:
         response = `El proceso de renovación implica la firma de un nuevo contrato y la validación de documentos necesarios. Para más detalles. <br>
-        <a href="CHATBOOT/PROCESO RENOVACION ARRENDA PROTECT.pdf" target="_blank">Descargar PDF</a>`;
+        <a href="CHATBOOT/PROCESO RENOVACION ARRENDA PROTECT.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"> </a>`;
         buttons = [
             { text: "Regresar", action: () => handleUserInput('4') }
         ];
         break;
     
     case 42:
-        response = "Para tramitar tu renovación, comunícate con nuestro equipo a través del <a href='mailto:renovaciones@example.com'>correo electrónico</a>.";
+        response = "Comunícate a nuestra linea de renovaciones 55 7331 6554 <br> Tambien puedes llamar a nuestras oficinas <br> 55 9047 2157 CDMX y Área Metropolitana <br> 442 728 0189 Querétaro.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('4') }
         ];
         break;
     //dalta archivo de costos de renovacion
     case 43:
-        response = `Los costos por renovación varían según el tipo de servicio. Consulta nuestra <a href='Programa de Lealtad Arrenda Protect.pdf' target='_blank'>tarifa</a> para más información.`;
+        response = `El precio de la renovación de la póliza se calcula de acuerdo a el precio de lista menos el descuento aplicable de acuerdo a nuestro programa de lealtad. Consulta nuestro programa en <a href='Lista de Servicios Arrenda Protect.pdf' target='_blank'> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"> </a> para más información.`;
         buttons = [
             { text: "Regresar", action: () => handleUserInput('4') }
         ];
         break;
     
     case 44:
-        response = "Las firmas de renovación se pueden realizar de manera presencial o digital. Contáctanos para agendar tu cita.";
+        response = "En Arrenda Protect te damos la posibilidad de firmar de manera presencial* tu contrato de lunes a domingo (aplica cargos extras para horarios especiales) y tambien contamos con plataforma para firmar electrónicamente con certificación conforme a la NOM-151 y generación de archivo Blockchain para evitar cualquier alteración posterior a la firma. <br> *Deberán presentarse todos los firmantes a la cita. En caso de recabación de firmas individuales se podrán agendar con costo extra.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('4') }
         ];
         break;
     
     case 51:
-        response = "Para solicitar tu factura, envía un correo a <a href='mailto:facturacion@example.com'>facturacion@example.com</a> con los datos necesarios.";
+        response = "Comunícate por whats app a Línea Protect )55 3208 3575), nuestra linea de atención a clientes. Debes enviar tu constancia de situación fiscal actualizada y tu comprobante de pago. En un plazo máximo de 24 hrs hábiles recibirás tu factura";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('5') }
         ];
         break;
     
     case 52:
-        response = "Si encuentras errores en tu facturación, por favor comunícate con nosotros para realizar las correcciones necesarias.";
+        response = "Puedes comunicarte por whats app a Línea Protect )55 3208 3575), nuestra linea de atención a clientes. Enviando la factura que recibiste e indicando cuales son los datos que se deben corregir, o mandar un correo con la misma información al correo reportes@arrendaprotect.com.mx. En un plazo máximo de 24 hrs hábiles recibirás tu factura.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('5') }
         ];
         break;
     
     case 61:
-        response = "Para una asesoría jurídica, contacta a nuestro equipo especializado a través del <a href='mailto:juridico@example.com'>correo electrónico</a>.";
+        response = "Comunícate por whats app a Línea Protect (55 3208 3575), nuestra linea de atención a clientes. Ahí puedes solicitar se agende una videoconferencia o llamada telefónica (lo que tú prefieras) para otorgarte la asesoría. <br> Tambien puedes llamar a nuestras oficinas y solicitarla. <br> 55 9047 2157 CDMX y Área Metropolitana <br> 442 728 0189 Querétaro.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('6') }
         ];
         break;
     
     case 62:
-        response = "Para conocer el estatus de tu expediente, envía un correo a <a href='mailto:expedientes@example.com'>expedientes@example.com</a>.";
+        response = " Comunícate por whats app a Línea Protect (55 3208 3575), nuestra linea de atención a clientes. Es muy importante que tengas el numero de tu póliza para que identifiquen tu expediente y puedan proporcionarte la información que requieres.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('6') }
         ];
         break;
     
     case 63:
-        response = "Para otros asuntos relacionados, contacta a nuestro departamento a través de <a href='mailto:atencion@example.com'>atencion@example.com</a>.";
+        response = "Comunícate por whats app a Línea Protect (55 3208 3575), nuestra linea de atención a clientes. Te canalizaran al área correspondiente para realizar el cierre de tu expediente. Tambien puedes llamar a nuestras oficinas y solicitarla. <br> 55 9047 2157 CDMX y Área Metropolitana <br> 442 728 0189 Querétaro.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('6') }
         ];
@@ -388,7 +389,7 @@ case 73:
         break;
     
     case 65:
-        response = "Para una terminación anticipada del contrato, comunícate con nosotros para revisar las condiciones y costos asociados.";
+        response = "Comunícate por whats app a Línea Protect (55 3208 3575), nuestra linea de atención a clientes. Te canalizaran al área correspondiente gestionar el proceso de convenio de terminación anticipada <br> Tambien puedes llamar a nuestras oficinas y solicitarla.<br> 55 9047 2157 CDMX y Área Metropolitana<br> 442 728 0189 Querétaro.";
         buttons = [
             { text: "Regresar", action: () => handleUserInput('6') }
         ];
@@ -403,7 +404,7 @@ case 73:
             break;
         
         case 712:
-            response = 'Video tutorial ### (por elaborarse cuando la plataforma tenga la versión final). Importante: debes revisar que tus datos de contacto sean correctos, ya que en caso de error no recibirás correctamente las notificaciones del avance del trámite.';
+            response = 'Video tutorial ### (por elaborarse cuando la plataforma tenga la versión final). <br> Importante: debes revisar que tus datos de contacto sean correctos, ya que en caso de error no recibirás correctamente las notificaciones del avance del trámite.';
             buttons = [
                 { text: "Regresar", action: () => handleUserInput('7') }
             ];
@@ -453,7 +454,7 @@ case 73:
         
         case 723:
             response = `Aquí tienes los requisitos. <br>
-            <a href="CHATBOOT/Requisitos Arrendador.pdf" target="_blank">Descargar PDF</a>`;
+            <a href="CHATBOOT/Requisitos Arrendador.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"></a>`;
             buttons = [
                 { text: "Regresar", action: () => handleUserInput('7') }
             ];
@@ -575,13 +576,28 @@ case 73:
 
 */
 
-
-
-
-
             case 8:
+                response = "Seleccionaste ARRENDAPP. Por favor, elige una subopción:";
+                    buttons = [
+                        { text: "Atención al cliente", action: () => handleUserInput('81') },
+                        { text: "Area de cobranza", action: () => handleUserInput('83') },
+                        { text: "Area de renovaciones", action: () => handleUserInput('82') },
+                        { text: "Regresar", action: () => showOptions() }
+                    ];
+                    break;
+
+
+            case 83:
                 handleWhatsAppMessage();
                 return;
+            case 81:
+                handleWhatsAppMessage2();
+                return;
+            case 82:
+                handleWhatsAppMessage3();
+                return;    
+
+
             default:
                 response = "Opción no válida. Por favor, elige una opción del menú.";
                 buttons = [
@@ -603,7 +619,23 @@ case 73:
             window.open(whatsappUrl, '_blank'); // Abre el enlace en una nueva ventana o pestaña
         }
     };
-    
+    //renovaciones
+    const handleWhatsAppMessage2 = () => {
+        if (window.userName) {
+            const fixedMessage = "Solicitud de soporte: Estoy teniendo problemas y/o dudas con el proceso de arrendamiento y necesito asistencia.(Describa el problema)";
+            const whatsappUrl = `https://wa.me/5573316554?text=Hola%20soy%20${encodeURIComponent(window.userName)}%0A%0A${encodeURIComponent(fixedMessage)}`;
+            window.open(whatsappUrl, '_blank'); // Abre el enlace en una nueva ventana o pestaña
+        }
+    };
+//rentas
+    const handleWhatsAppMessage3 = () => {
+        if (window.userName) {
+            const fixedMessage = "Solicitud de soporte: Estoy teniendo problemas y/o dudas con el proceso de arrendamiento y necesito asistencia.(Describa el problema)";
+            const whatsappUrl = `https://wa.me/5560728629?text=Hola%20soy%20${encodeURIComponent(window.userName)}%0A%0A${encodeURIComponent(fixedMessage)}`;
+            window.open(whatsappUrl, '_blank'); // Abre el enlace en una nueva ventana o pestaña
+        }
+    };
+  
 
     // Inicializar opciones si el nombre está disponible
     if (window.userName) {
