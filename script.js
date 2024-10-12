@@ -34,7 +34,7 @@ chatIcon.addEventListener('click', () => {
 
 // Pedir el nombre del usuario
 function askForName() {
-    chatBody.innerHTML += `<div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> ¡Hola! Antes de comenzar, ¿cuál es tu nombre?</div>`;
+    chatBody.innerHTML += `<div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> ¡Hola! Soy Eva, tu asistente virtual. Antes de comenzar, ¿Cuál es tu nombre?</div>`;
     chatBody.scrollTop = chatBody.scrollHeight; // Desplaza hacia abajo
 }
 
@@ -48,13 +48,13 @@ sendButton.addEventListener('click', () => {
             chatBody.innerHTML += `<div class="chat-message user-message"><strong>${userName}:</strong> ${userMessage}</div>`;
             chatBody.innerHTML += `<div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> ¡Encantado de conocerte, ${userName}! ¿Qué quieres hacer hoy?</div>`;
             showMenu(); // Mostrar menú después de que el usuario ingresa su nombre
-        } else {
+        } /*else {
             chatBody.innerHTML += `<div class="chat-message user-message"><strong>${userName}:</strong> ${userMessage}</div>`;
             setTimeout(() => {
                 chatBody.innerHTML += `<div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> Respuesta automática</div>`;
                 chatBody.scrollTop = chatBody.scrollHeight; // Desplaza hacia abajo
             }, 1000);
-        }
+        } */
 
         userInput.value = ''; // Limpiar el campo de entrada
     }
@@ -66,13 +66,13 @@ function showMenu() {
     chatBody.innerHTML = `
         <div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> ¡Encantado de conocerte, ${userName}! ¿En que puedo ayudarte el dia de hoy?</div>
         <div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> Elige una opción:</div>
-        <button class="menu-button" onclick="selectOption('11')">SERVICIOS</button>
-        <button class="menu-button" onclick="selectOption('12')">INVESTIGACIONES</button>
-        <button class="menu-button" onclick="selectOption('13')">REPORTES</button>
-        <button class="menu-button" onclick="selectOption('14')">RENOVACIONES</button>
-        <button class="menu-button" onclick="selectOption('15')">FACTURACIÓN</button>
-        <button class="menu-button" onclick="selectOption('16')">JURÍDICO</button>
-        <button class="menu-button" onclick="selectOption('17')">ARRENDAPP</button>
+        <button class="menu-button" onclick="selectOption('SERVICIOS')">SERVICIOS</button>
+        <button class="menu-button" onclick="selectOption('INVESTIGACIONES')">INVESTIGACIONES</button>
+        <button class="menu-button" onclick="selectOption('REPORTES')">REPORTES</button>
+        <button class="menu-button" onclick="selectOption('RENOVACIONES')">RENOVACIONES</button>
+        <button class="menu-button" onclick="selectOption('FACTURACIÓN')">FACTURACIÓN</button>
+        <button class="menu-button" onclick="selectOption('JURÍDICO')">JURÍDICO</button>
+        <button class="menu-button" onclick="selectOption('ARRENDAPP')">ARRENDAPP</button>
         <button class="menu-button" onclick="showWhatsAppOptions()">CONTACTANOS</button>
     `;
     chatBody.scrollTop = 0; // Desplazar hacia arriba al inicio
@@ -91,19 +91,19 @@ function selectOption(optionText) {
 // Generar submenú según la opción seleccionada
 function generateSubMenu(optionText) {
     switch (optionText) {
-        case '11':
+        case 'SERVICIOS':
             return generateServiceSubMenu();
-        case '12':
+        case 'INVESTIGACIONES':
             return generateInvestigationSubMenu();
-        case '13':
+        case 'REPORTES':
             return generateReportSubMenu();
-        case '14':
+        case 'RENOVACIONES':
             return generateRenewalSubMenu();
-        case '15':
+        case 'FACTURACIÓN':
             return generateBillingSubMenu();
-        case '16':
+        case 'JURÍDICO':
             return generateLegalSubMenu();
-        case '17':
+        case 'ARRENDAPP':
             return generateArrendappSubMenu();
         default:
             return '';
@@ -128,13 +128,13 @@ function generateServiceSubMenu() {
 
 function generateInvestigationSubMenu() {
     return `
-        <button class="menu-button" onclick="handleSubOption('21')">1. Información de sus servicios</button>
-        <button class="menu-button" onclick="handleSubOption('22')">2. Costos de servicios</button>
-        <button class="menu-button" onclick="handleSubOption('23')">3. Coberturas legales (pólizas jurídicas)</button>
-        <button class="menu-button" onclick="handleSubOption('24')">4. ¿Tienen garantía de pago de rentas?</button>
-        <button class="menu-button" onclick="handleSubOption('25')">5. ¿Cuánto tiempo dura el trámite?</button>
-        <button class="menu-button" onclick="handleSubOption('26')">6. ¿Cómo se realiza la firma de los contratos?</button>
-        <button class="menu-button" onclick="handleSubOption('27')">7. ¿Cuáles son sus horarios de servicio?</button>
+        <button class="menu-button" onclick="handleSubOption('21')">1. ¿Cómo puedo asegurarme de que no usarán mis datos con fines lucrativos?</button>
+        <button class="menu-button" onclick="handleSubOption('22')">2. ¿En que consiste la investigación?</button>
+        <button class="menu-button" onclick="handleSubOption('23')">3. ¿Por qué no se reembolsa el pago del anticipo?</button>
+        <button class="menu-button" onclick="handleSubOption('24')">4. ¿Por qué es necesario hacer las llamadas con mis referencias?</button>
+        <button class="menu-button" onclick="handleSubOption('25')">5. ¿Cuál es el proceso de la póliza?</button>
+        <button class="menu-button" onclick="handleSubOption('26')">6. ¿Qué beneficios obtengo al adquirir una póliza jurídica de arrendamiento?</button>
+        <button class="menu-button" onclick="handleSubOption('27')">7. ¿Estará conmigo alguien durante el proceso?</button>
         <button class="menu-button" onclick="showWhatsAppOptions()">8. Enviar mensaje por WhatsApp</button>
         <button class="menu-button" onclick="goBack()">Regresar</button>
     `;
@@ -186,13 +186,41 @@ function generateLegalSubMenu() {
 
 function generateArrendappSubMenu() {
     return `
-        <button class="menu-button" onclick="generateAsesorSubMenu()">1. Soy Asesor</button>
-        <button class="menu-button" onclick="generatePropietarioSubMenu()">2. Soy Propietario</button>
-        <button class="menu-button" onclick="generateInquilinoSubMenu()">3. Soy Inquilino</button>
+        <button class="menu-button" onclick="selectOption2('Asesor')">1. Soy Asesor</button>
+        <button class="menu-button" onclick="selectOption2('Propietario')">2. Soy Propietario</button>
+        <button class="menu-button" onclick="selectOption2('Inquilino')">3. Soy Inquilino</button>
         <button class="menu-button" onclick="showWhatsAppOptions()">4. Enviar mensaje por WhatsApp</button>
         <button class="menu-button" onclick="goBack()">Regresar</button>
     `;
 }
+
+
+
+function selectOption2(optionText) {
+    previousMenus.push(chatBody.innerHTML); // Guardar el menú actual
+    chatBody.innerHTML = ''; // Limpiar el contenido del chat
+    chatBody.innerHTML += `<div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> Has seleccionado ${optionText}. Por favor, elige una subopción:</div>`;
+    chatBody.innerHTML += generateSubMenu2(optionText); // Cambia optionText2 a optionText
+    
+    chatBody.scrollTop = 0; // Desplazar hacia arriba al inicio
+}
+
+
+function generateSubMenu2(optionText) {
+    switch (optionText) {
+        case 'Asesor':
+            return generateAsesorSubMenu();
+        case 'Propietario':
+            return generatePropietarioSubMenu();
+        case 'Inquilino':
+            return generateInquilinoSubMenu();
+        default:
+            return '';
+    }
+}
+
+
+
 
 function generateAsesorSubMenu() {
     return `
@@ -241,6 +269,7 @@ function generateInquilinoSubMenu() {
 function handleSubOption(subOption) {
     let response = '';
     let buttonsHtml = '';
+  
 
     switch (subOption) {
         /*case '11':
@@ -267,23 +296,38 @@ function handleSubOption(subOption) {
 
         
 
-    case '11':
-        response = `Aquí tienes la información sobre nuestros servicios.
-                    <a href="CHATBOOT/Brochure Arrenda Protect 2024.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"></a>`;
-        buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-        break;
+        case '11':
+    response = `Aquí tienes la información sobre nuestros servicios.
+    <button class="menu-button" onclick="window.open('CHATBOOT/Brochure Arrenda Protect 2024.pdf', '_blank')" style="padding: 0; border: none; background: none; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+        <img src="CHATBOOT/servicios.png" alt="Brochure" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </button>`;
+    
+    buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+    break;
+
+
     
     case '12':
-        response = `Aquí tienes la imagen con los costos de nuestros servicios. <br>
-                    <a href="CHATBOOT/Lista de Servicios Arrenda Protect.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"></a>`;
-        buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-        break;
+    response = `Aquí tienes la imagen con los costos de nuestros servicios.
+    <button class="menu-button" onclick="window.open('CHATBOOT/Lista de Servicios Arrenda Protect.pdf', '_blank')" style="padding: 0; border: none; background: none; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+        <img src="CHATBOOT/costos.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </button>`;
+    
+    buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+    break;
+
+
+
     
     case '13':
         response = `Aquí tienes las coberturas legales de nuestras pólizas jurídicas. <br>
-                    <a href="CHATBOOT/Coberturas Arrrenda Protect.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"></a>`;
+                    <button class="menu-button" onclick="window.open('CHATBOOT/Coberturas Arrrenda Protect.pdf', '_blank')" style="padding: 0; border: none; background: none; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <img src="CHATBOOT/coberturas.png" alt="Brochure" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                    </button>`;
+        
         buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
         break;
+    
     
     case '14':
         response = "Con nuestra cobertura full rent, el propietario tiene la garantía de recibir sus pagos a tiempo aún cuando el inquilino no pague.";
@@ -302,14 +346,23 @@ function handleSubOption(subOption) {
         break;
     
     case '17':
-        response = "Lunes a viernes de 9:30 a 18:00 hrs <br> Sábado de 9:30 a 13:30 hrs";
+        response = "Lunes a Viernes de 9:30 a 18:00 hrs <br> Sábado de 9:30 a 13:30 hrs";
         buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
         break;
-    
-    case '21':
-        response = `Todos la información y documentos que recibimos son utilizados estrictamente para los procesos de otorgamiento de nuestros servicios y están resguardados bajo nuestro aviso de privacidad que puedes consultar en <a href="CHATBOOT/AVISO DE PRIVACIDAD ARRENDA PROTECT.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"></a>.`;
-        buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-        break;
+
+
+        case '21':
+            response = `Todos la información y documentos que recibimos son utilizados estrictamente para los procesos de otorgamiento de nuestros servicios y están resguardados bajo nuestro aviso de privacidad que puedes consultar en. 
+                        <div style="margin-top: 10px;">
+                            <button class="menu-button" onclick="window.open('CHATBOOT/AVISO DE PRIVACIDAD ARRENDA PROTECT.pdf', '_blank')"  style="padding: 0; border: none; background: none; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <img src="CHATBOOT/privacidad.png" alt="Aviso de Privacidad" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            </button>
+                        </div>`;
+            
+            buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+            break;
+        
+        
     
     case '22':
         response = "En la validación de la identidad del prospecto y su fiador u obligado solidario (si los tuviese) así como la validación de su solvencia económica, moral y jurídica. Lo cual se determinará mediante la investigación que Arrenda Protect realice ante diversas sociedades publicas o privadas a nivel nacional e internacional";
@@ -366,11 +419,15 @@ function handleSubOption(subOption) {
         buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
         break;
     
-    case '41':
-        response = `El proceso de renovación implica la firma de un nuevo contrato y la validación de documentos necesarios. Para más detalles. <br>
-        <a href="CHATBOOT/PROCESO RENOVACION ARRENDA PROTECT.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"> </a>`;
-        buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-        break;
+        case '41':
+            response = `El proceso de renovación implica la firma de un nuevo contrato y la validación de documentos necesarios. Para más detalles. <br>
+                        <button class="menu-button" onclick="window.open('CHATBOOT/PROCESO RENOVACION ARRENDA PROTECT.pdf', '_blank')" style="padding: 0; border: none; background: none; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                            <img src="CHATBOOT/renovaciones.png" alt="Brochure" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                        </button>`;
+            
+            buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+            break;
+        
     
     case '42':
         response = "Comunícate a nuestra linea de renovaciones 55 7331 6554 <br> Tambien puedes llamar a nuestras oficinas <br> 55 9047 2157 CDMX y Área Metropolitana <br> 442 728 0189 Querétaro.";
@@ -378,7 +435,11 @@ function handleSubOption(subOption) {
         break;
     //dalta archivo de costos de renovacion
     case '43':
-        response = `El precio de la renovación de la póliza se calcula de acuerdo a el precio de lista menos el descuento aplicable de acuerdo a nuestro programa de lealtad. Consulta nuestro programa en <a href='Lista de Servicios Arrenda Protect.pdf' target='_blank'> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"> </a> para más información.`;
+        response = `El precio de la renovación de la póliza se calcula de acuerdo al precio de lista menos el descuento aplicable de acuerdo a nuestro programa de lealtad. Consulta nuestro programa en 
+                    <button class="menu-button" onclick="window.open('Lista de Servicios Arrenda Protect.pdf', '_blank')" style="padding: 0; border: none; background: none; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <img src="CHATBOOT/servicios.png" alt="Brochure" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                    </button> para más información.`;
+        
         buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
         break;
     
@@ -449,7 +510,7 @@ function handleSubOption(subOption) {
             break;
         
         case '716':
-            response = 'Para aclarar dudas respecto a los procesos debes ingresar a la siguiente liga: <a href="https://www.youtube.com/@ArrendaProtect" target="_blank">www.youtube.com/@ArrendaProtect</a> donde podrás encontrar tutoriales para realizar tus procesos. En caso de que la información que requieras no se encuentre en nuestro canal, solicita asistencia de un asesor protect aquí: (liga a línea protect). *Recuerda que nuestros horarios de atención son: Lunes a viernes de 9:30 a 18:00 hrs y Sábado de 9:30 a 13:30 hrs.';
+            response = 'Para aclarar dudas respecto a los procesos debes ingresar a la siguiente liga donde podrás encontrar tutoriales para realizar tus procesos. En caso de que la información que requieras no se encuentre en nuestro canal, solicita asistencia de un asesor protect aquí: (liga a línea protect). *Recuerda que nuestros horarios de atención son: Lunes a viernes de 9:30 a 18:00 hrs y Sábado de 9:30 a 13:30 hrs. <a href="https://www.youtube.com/@ArrendaProtect" target="_blank">@ArrendaProtect</a>';
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
@@ -463,11 +524,15 @@ function handleSubOption(subOption) {
           buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
-        case '723':
-            response = `Aquí tienes los requisitos. <br>
-            <a href="CHATBOOT/Requisitos Arrendador.pdf" target="_blank"> <img src="CHATBOOT/Descargar.png" alt="Brochure" style="max-width: 100%; height: auto;"></a>`;
-            buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-            break;
+            case '723':
+                response = `Aquí tienes los requisitos. <br>
+                            <button class="menu-button" onclick="window.open('CHATBOOT/Requisitos Arrendador.pdf', '_blank')" style="padding: 0; border: none; background: none; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <img src="CHATBOOT/arrendador.png" alt="Brochure" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                            </button>`;
+                
+                buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+                break;
+            
         
         case '724':
             response = 'Se necesitan subir los siguientes documentos: <br>+Identificación oficial vigente (INE o pasaporte) es muy importante que se envíe en formato imagen (foto) sin flash, sin sombras en fondo de cualquier color menos blanco y si recortar la fotografía <br>+Comprobante de domicilio del inmueble a arrendar a nombre del arrendador en formato PDF. Si tienes duda de tu registro ingresa a <a href="https://www.youtube.com/@ArrendaProtect" target="_blank">www.youtube.com/@ArrendaProtect</a> y consulta el tutorial de expediente del arrendador.';
@@ -493,13 +558,26 @@ function handleSubOption(subOption) {
             response = 'Video tutorial ### (por elaborarse cuando la plataforma tenga la versión final). Importante: debes revisar que tus datos de contacto sean correctos, ya que en caso de error no recibirás correctamente las notificaciones del avance del trámite.';
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
-        
-        case '733':     response = `Aquí tienes los requisitos. <br>
-        <a href="CHATBOOT/Requisitos Arrendatario.pdf" target="_blank">Inquilino PDF</a><br>
-        <a href="CHATBOOT/Requisitos Fiador.pdf" target="_blank">Fiador PDF</a><br>
-        <a href="CHATBOOT/Requisitos Obligado Solidario.pdf" target="_blank">Obligado Solidario PDF</a>`;
-        buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-            break;
+            case '733':
+                response = ` : .- <br><br>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <button class="menu-button" onclick="window.open('CHATBOOT/Requisitos Arrendatario.pdf', '_blank')" style="padding: 0; border: none; background: none; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <img src="CHATBOOT/arrendatario.png" alt="Inquilino PDF" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                                    Inquilino PDF
+                                </button>
+                                <button class="menu-button" onclick="window.open('CHATBOOT/Requisitos Fiador.pdf', '_blank')" style="padding: 0; border: none; background: none; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <img src="CHATBOOT/fiador.png" alt="Fiador PDF" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                                    Fiador PDF
+                                </button>
+                                <button class="menu-button" onclick="window.open('CHATBOOT/Requisitos Obligado Solidario.pdf', '_blank')" style="padding: 0; border: none; background: none; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <img src="CHATBOOT/obligado.png" alt="Obligado Solidario PDF" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                                    Obligado Solidario PDF
+                                </button>
+                            </div>`;
+            
+                buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+                break;
+            
         
         case '734':
             response = 'Se necesitan subir los siguientes documentos: <br>+Identificación oficial vigente (INE o pasaporte) es muy importante que se envíe en formato imagen (foto) sin flash, sin sombras en fondo de cualquier color menos blanco y si recortar la fotografía <br>+Si eres extranjero, residencia TEMPORAL o PERMANENTE vigente formato PDF <br>+Comprobante de ingresos de los 3 últimos meses (nómina o estados de cuenta) tus ingresos netos deben cubrir por lo menos 3 veces el monto de renta que deseas contratar, formato PDF <br>+Constancia laboral (aplica sólo para empleados) formato PDF. Si tienes duda de tu registro ingresa a <a href="https://www.youtube.com/@ArrendaProtect" target="_blank">www.youtube.com/@ArrendaProtect</a> y consulta el tutorial de expediente del arrendatario.';
@@ -526,10 +604,23 @@ function handleSubOption(subOption) {
     }
 
     // Mostrar la respuesta en el chat
-    chatBody.innerHTML += `<div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> ${response}</div>`;
-    chatBody.innerHTML += buttonsHtml; // Agregar el HTML de los botones
-    chatBody.scrollTop = chatBody.scrollHeight; // Desplaza hacia abajo
+// Guardar la altura antes de agregar el nuevo mensaje
+const previousScrollHeight = chatBody.scrollHeight;
+
+// Mostrar la respuesta en el chat
+chatBody.innerHTML += `<div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> ${response}</div>`;
+chatBody.innerHTML += buttonsHtml; // Agregar el HTML de los botones
+
+// Calcular la posición de desplazamiento deseada
+const newScrollHeight = chatBody.scrollHeight;
+const newMessageHeight = chatBody.lastElementChild.offsetHeight; // Altura del nuevo mensaje
+const newScrollPosition = previousScrollHeight - newMessageHeight; // Nueva posición a la que debe desplazarse
+
+// Ajustar el scroll
+chatBody.scrollTop = newScrollPosition;
+
 }
+
 
 
 // Función para regresar al menú anterior
@@ -547,10 +638,11 @@ function goBack() {
 function showWhatsAppOptions() {
     chatBody.innerHTML = `
         <div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> Elige a qué número deseas enviar el mensaje:</div>
-        <button class="menu-button" onclick="handleWhatsAppMessage('5532083575')">Soporte General</button>
+        <button class="menu-button" onclick="handleWhatsAppMessage('5532083575')">Atención al cliente</button>
+        <button class="menu-button" onclick="handleWhatsAppMessage1('5533726266')">Soporte técnico</button>
         <button class="menu-button" onclick="handleWhatsAppMessage('5573316554')">Renovaciones</button>
-        <button class="menu-button" onclick="handleWhatsAppMessage('5560728629')">Rentas</button>
-        <button class="menu-button" onclick="goBack()">Regresar</button>
+        <button class="menu-button" onclick="handleWhatsAppMessage('5560728629')">Jurídico</button>
+        <button class="menu-button" onclick="showMenu()">Regresar</button>
     `;
     chatBody.scrollTop = chatBody.scrollHeight; // Desplazar hacia abajo
 }
@@ -566,4 +658,13 @@ const handleWhatsAppMessage = (number, responseText) => {
     }
 };
 
+const handleWhatsAppMessage1 = (number, responseText) => {
+    if (userName) {
+        const fixedMessage = "Solicitud de soporte: Estoy teniendo problemas con la aplicación o plataforma. (Describa el problema)";
+        const selectionsMessage = selections.join(', '); // Convertir las selecciones a un string
+        const responseMessage = responseText || "No hay respuesta específica.";
+        const whatsappUrl = `https://wa.me/${number}?text=Hola%20soy%20${encodeURIComponent(userName)}%0A%0A${encodeURIComponent(fixedMessage)}%0A%0A${encodeURIComponent('Mis selecciones fueron: ' + selectionsMessage)}%0A%0A${encodeURIComponent('Respuesta: ' + responseMessage)}`;
+        window.open(whatsappUrl, '_blank'); // Abre el enlace en una nueva ventana o pestaña
+    }
+};
 
