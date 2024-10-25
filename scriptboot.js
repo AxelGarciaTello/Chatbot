@@ -391,7 +391,7 @@ function handleSubOption(subOption) {
         case '22':
             response = `
                 <div style="text-align: justify;">
-                    En la validación de la identidad del prospecto y su fiador u obligado solidario (si los tuviese) así como la validación de su solvencia económica, moral y jurídica. Lo cual se determinará mediante la investigación que Arrenda Protect realice ante diversas sociedades públicas o privadas a nivel nacional e internacional.
+                    Realizamos la validación de la identidad del prospecto y su fiador u obligado solidario (si los tuviese) así como la validación de su solvencia económica, moral y jurídica. Lo cual se determinará mediante la investigación que Arrenda Protect realice ante diversas sociedades públicas o privadas a nivel nacional e internacional.
                 </div>`;
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
@@ -464,7 +464,7 @@ function handleSubOption(subOption) {
         case '33':
             response = `
                 <div style="text-align: justify;">
-                    Es muy importante que no te esperes hasta el último momento para reportar una controversia de tu arrendamiento con nosotros. Comunícate por WhatsApp a Línea Protect (55 3208 3575), nuestra línea de atención a clientes. Te canalizarán al área correspondiente para gestionar los procesos de entrega de tu inmueble.
+            Es muy importante que no te esperes hasta el último momento para reportar una controversia de tu arrendamiento con nosotros. Comunícate por WhatsApp a Línea Protect (55 3208 3575), nuestra línea de atención a clientes. Te canalizarán al área correspondiente para gestionar los procesos de seguimiento y atención del propietario para la reparación de los vicios ocultos.
                 </div>`;
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
@@ -523,7 +523,7 @@ function handleSubOption(subOption) {
             case '43':
                 response = `
                     <div style="text-align: justify;">
-                        El precio de la renovación de la póliza se calcula de acuerdo al precio de lista menos el descuento aplicable de acuerdo a nuestro programa de lealtad. Consulta nuestro programa en para más información.
+                        El precio de la renovación de la póliza se calcula de acuerdo al precio de lista menos el descuento aplicable de acuerdo a nuestro programa de lealtad. Consulta nuestro programa para más información.
                        <br> <a href="CHATBOOT/Programa_Lealtad _rotect.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
                             Ver programa de lealtad
                         </a> 
