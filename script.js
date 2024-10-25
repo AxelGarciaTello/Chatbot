@@ -302,34 +302,37 @@ function handleSubOption(subOption) {
         //seccion 1
         case '11':
             response = `
-                <div style="text-align: justify;">
-                    Aquí están nuestros servicios.
-                    <a href="CHATBOOT/Brochure Arrenda Protect 2024.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
-                        Ver Servicios
-                    </a>
-                </div>`;
+    <div style="text-align: justify;">
+        Conoce aquí nuestros servicios.
+        <a href="CHATBOOT/Brochure Arrenda Protect 2024.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
+            Ver lista de servicios
+        </a>
+    </div>`;
+
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
         case '12':
             response = `
-                <div style="text-align: justify;">
-                    Aquí están nuestros costos de servicios.
-                    <a href="CHATBOOT/Lista de Servicios Arrenda Protect.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
-                        Ver Costos
-                    </a>
-                </div>`;
+    <div style="text-align: justify;">
+        Conoce nuestros precios.
+        <a href="CHATBOOT/Lista de Servicios Arrenda Protect.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
+            Ver costos
+        </a>
+    </div>`;
+
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
         case '13':
             response = `
-                <div style="text-align: justify;">
-                    Aquí están nuestras coberturas legales.
-                    <a href="CHATBOOT/Coberturas Arrrenda Protect.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
-                        Ver Coberturas
-                    </a>
-                </div>`;
+            <div style="text-align: justify;">
+                Conoce nuestras coberturas legales.
+                <a href="CHATBOOT/Coberturas Arrenda Protect.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
+                    Ver coberturas
+                </a>
+            </div>`;
+        
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
@@ -343,28 +346,31 @@ function handleSubOption(subOption) {
         
         case '15':
             response = `
-                <div style="text-align: justify;">
-                    Nuestros servicios van desde las 24 hrs hábiles con un tiempo máximo de 72 hrs.
-                </div>`;
+    <div style="text-align: justify;">
+        Nuestros servicios van desde las 24 hrs hábiles con un tiempo máximo de 72 hrs.
+    </div>`;
+
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
-        case '16':
-            response = `
-                <div style="text-align: justify;">
-                    En Arrenda Protect te damos la posibilidad de firmar de manera presencial 
-                    <strong style="font-size: smaller;">*tu contrato de lunes a domingo (aplica cargos extras para horarios especiales)</strong> 
-                    y también contamos con plataforma para firmar electrónicamente con certificación conforme a la NOM-151 y generación de archivo Blockchain para evitar cualquier alteración posterior a la firma.<br>
-                    <strong style="font-size: smaller;">*Deberán presentarse todos los firmantes a la cita. En caso de recabación de firmas individuales se podrán agendar con costo extra.</strong>
-                </div>`;
-            buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-            break;
+            case '16':
+                response = `
+                    <div style="text-align: justify;">
+                        En Arrenda Protect te damos la posibilidad de firmar de manera presencial 
+                        <strong style="font-size: smaller;">*tu contrato de lunes a domingo (aplica cargos extras para horarios especiales)</strong> 
+                        y también contamos con una plataforma para firmar electrónicamente, con certificación conforme a la NOM-151 y generación de archivo Blockchain para evitar cualquier alteración posterior a la firma.<br>
+                        <strong style="font-size: smaller;">*Deberán presentarse todos los firmantes a la cita. En caso de recabación de firmas individuales, se podrán agendar con costo extra.</strong>
+                    </div>`;
+                buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+                break;
+            
         
         case '17':
             response = `
-                <div style="text-align: justify;">
-                    Lunes a Viernes de 9:30 a 18:00 hrs<br> Sábado de 9:30 a 13:30 hrs
-                </div>`;
+    <div style="text-align: justify;">
+        Lunes a Viernes de 9:30 a 18:00 hrs<br> Sábado de 9:30 a 13:30 hrs
+    </div>`;
+
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
@@ -429,9 +435,10 @@ function handleSubOption(subOption) {
         
         case '27':
             response = `
-                <div style="text-align: justify;">
-                    Si tienes dudas sobre tu proceso de investigación, comunícate por WhatsApp a Línea Protect (55 3208 3575), nuestra línea de atención a clientes. Ahí te canalizarán al área de investigaciones.
-                </div>`;
+    <div style="text-align: justify;">
+        Si tienes dudas sobre tu proceso, comunícate por WhatsApp a Línea Protect (55 3208 3575), nuestra línea de atención a clientes. Ahí te canalizarán al área correspondiente.
+    </div>`;
+
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
@@ -473,14 +480,18 @@ function handleSubOption(subOption) {
         
         case '35':
             response = `
-                <div style="text-align: justify;">
-                    WhatsApp:<br>
-                    <strong style="font-size: smaller;">55 3208 3575</strong> Línea Protect (línea de atención a clientes)<br>
-                    <strong style="font-size: smaller;">55 7331 6554</strong> Línea de renovaciones<br>
-                    También puedes llamar a nuestras oficinas:<br>
-                    <strong style="font-size: smaller;">55 9047 2157</strong> CDMX y Área Metropolitana<br>
-                    <strong style="font-size: smaller;">442 728 0189</strong> Querétaro
-                </div>`;
+            <div style="text-align: justify;">
+                WhatsApp:<br>
+                <strong style="font-size: smaller;">55 3208 3575</strong> Línea Protect (línea de atención a clientes)<br>
+                <strong style="font-size: smaller;">55 7331 6554</strong> Línea de renovaciones<br>
+                <strong style="font-size: smaller;">55 6072 8629</strong> Línea de jurídico<br>
+                <strong style="font-size: smaller;">56 4314 7054</strong> Línea de Soporte Técnico<br>
+                También puedes llamar a nuestras oficinas:<br>
+                <strong style="font-size: smaller;">55 9047 2157</strong> CDMX y Área Metropolitana<br>
+                <strong style="font-size: smaller;">442 728 0189</strong> Querétaro
+            </div>`;
+            
+
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
          //seccion 4  
@@ -522,12 +533,13 @@ function handleSubOption(subOption) {
         
         case '44':
             response = `
-                <div style="text-align: justify;">
-                    En Arrenda Protect te damos la posibilidad de firmar de manera presencial 
-                    <strong style="font-size: smaller;">*tu contrato de lunes a domingo (aplica cargos extras para horarios especiales)</strong> 
-                    y también contamos con plataforma para firmar electrónicamente con certificación conforme a la NOM-151 y generación de archivo Blockchain para evitar cualquier alteración posterior a la firma.<br>
-                    <strong style="font-size: smaller;">*Deberán presentarse todos los firmantes a la cita. En caso de recabación de firmas individuales se podrán agendar con costo extra.</strong>
-                </div>`;
+    <div style="text-align: justify;">
+        En Arrenda Protect te damos la posibilidad de firmar de manera presencial 
+        <strong style="font-size: smaller;">*tu contrato de lunes a domingo (aplica cargos extras para horarios especiales)</strong> 
+        y también contamos con plataforma para firmar electrónicamente con certificación conforme a la NOM-151 y generación de archivo Blockchain para evitar cualquier alteración posterior a la firma.<br>
+        <strong style="font-size: smaller;">*Deberán presentarse todos los firmantes a la cita. En caso de recabación de firmas individuales se podrán agendar con costo extra.</strong>
+    </div>`;
+
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
@@ -575,13 +587,14 @@ case '62':
 
 case '63':
     response = `
-        <div style="text-align: justify;">
-            Comunícate por WhatsApp a Línea Protect (55 3208 3575), nuestra línea de atención a clientes. 
-            Te canalizarán al área correspondiente para realizar el cierre de tu expediente. 
-            También puedes llamar a nuestras oficinas: <br>
-            - 55 9047 2157 CDMX y Área Metropolitana <br>
-            - 442 728 0189 Querétaro.
-        </div>`;
+    <div style="text-align: justify;">
+        Comunícate por WhatsApp a Línea Protect (55 3208 3575), nuestra línea de atención a clientes. 
+        Te canalizarán al área correspondiente para dar atención a tu solicitud. 
+        También puedes llamar a nuestras oficinas: <br>
+        - 55 9047 2157 CDMX y Área Metropolitana <br>
+        - 442 728 0189 Querétaro.
+    </div>`;
+
     buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
     break;
 
@@ -659,12 +672,10 @@ case '65':
         
         case '716':
             response = `
-                <div style="text-align: justify;">
-                    Para aclarar dudas respecto a los procesos debes ingresar a la siguiente liga donde podrás encontrar tutoriales para realizar tus procesos. 
-                    En caso de que la información que requieras no se encuentre en nuestro canal, solicita asistencia de un asesor protect aquí: (liga a línea protect). 
-                    <strong style="font-size: smaller;">*Recuerda que nuestros horarios de atención son: Lunes a viernes de 9:30 a 18:00 hrs y Sábado de 9:30 a 13:30 hrs.</strong> 
-                    <a href="https://www.youtube.com/@ArrendaProtect" target="_blank">@ArrendaProtect</a>
-                </div>`;
+        <div style="text-align: justify;">
+            Estamos trabajando en material de apoyo para tus dudas.
+        </div>`;
+    buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
@@ -725,12 +736,9 @@ case '65':
         
         case '726':
             response = `
-                <div style="text-align: justify;">
-                    Para aclarar dudas respecto a los procesos debes ingresar a la siguiente liga: 
-                    <a href="https://www.youtube.com/@ArrendaProtect" target="_blank">www.youtube.com/@ArrendaProtect</a> 
-                    donde podrás encontrar tutoriales para realizar tus procesos. En caso de que la información que requieras no se encuentre en nuestro canal, solicita asistencia de un asesor protect aquí: (liga a línea protect). 
-                    <strong style="font-size: smaller;">*Recuerda que nuestros horarios de atención son: Lunes a viernes de 9:30 a 18:00 hrs y Sábado de 9:30 a 13:30 hrs.</strong>
-                </div>`;
+            <div style="text-align: justify;">
+                Estamos trabajando en material de apoyo para tus dudas.
+            </div>`;
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
@@ -802,11 +810,9 @@ case '735':
 case '736':
     response = `
         <div style="text-align: justify;">
-            Para aclarar dudas respecto a los procesos debes ingresar a la siguiente liga: 
-            <a href="https://www.youtube.com/@ArrendaProtect" target="_blank">www.youtube.com/@ArrendaProtect</a> 
-            donde podrás encontrar tutoriales para realizar tus procesos. En caso de que la información que requieras no se encuentre en nuestro canal, solicita asistencia de un asesor protect aquí: (liga a línea protect). 
-            <strong style="font-size: smaller;">*Recuerda que nuestros horarios de atención son: Lunes a viernes de 9:30 a 18:00 hrs y Sábado de 9:30 a 13:30 hrs.</strong>
+            Estamos trabajando en material de apoyo para tus dudas.
         </div>`;
+
     buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
     break;
 
@@ -825,7 +831,8 @@ case '736':
 const previousScrollHeight = chatBody.scrollHeight;
 
 // Mostrar la respuesta en el chat
-chatBody.innerHTML += `<div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> ${response}</div>`;
+chatBody.innerHTML += `<div class="chat-message bot-message" style="font-size: 0.8em;"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /></strong> ${response}</div>`;
+
 chatBody.innerHTML += buttonsHtml; // Agregar el HTML de los botones
 
 // Calcular la posición de desplazamiento deseada
@@ -856,7 +863,7 @@ function showWhatsAppOptions() {
     chatBody.innerHTML = `
         <div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> Elige a qué número deseas enviar el mensaje:</div>
         <button class="menu-button" onclick="handleWhatsAppMessage('5532083575')">Atención al cliente</button>
-        <button class="menu-button" onclick="handleWhatsAppMessage1('5533726266')">Soporte técnico</button>
+        <button class="menu-button" onclick="handleWhatsAppMessage1('5643147054')">Soporte técnico</button>
         <button class="menu-button" onclick="handleWhatsAppMessage('5573316554')">Renovaciones</button>
         <button class="menu-button" onclick="handleWhatsAppMessage('5560728629')">Jurídico</button>
         <button class="menu-button" onclick="showMenu()">Regresar</button>
@@ -865,22 +872,18 @@ function showWhatsAppOptions() {
 }
 
 // Función para enviar mensaje a WhatsApp
-const handleWhatsAppMessage = (number, responseText) => {
+const handleWhatsAppMessage = (number) => {
     if (userName) {
         const fixedMessage = "Solicitud de soporte: Estoy teniendo problemas y/o dudas con el proceso de arrendamiento y necesito asistencia. (Describa el problema)";
-        const selectionsMessage = selections.join(', '); // Convertir las selecciones a un string
-        const responseMessage = responseText || "No hay respuesta específica.";
-        const whatsappUrl = `https://wa.me/${number}?text=Hola%20soy%20${encodeURIComponent(userName)}%0A%0A${encodeURIComponent(fixedMessage)}%0A%0A${encodeURIComponent('Mis selecciones fueron: ' + selectionsMessage)}%0A%0A${encodeURIComponent('Respuesta: ' + responseMessage)}`;
+        const whatsappUrl = `https://wa.me/${number}?text=Hola%20soy%20${encodeURIComponent(userName)}%0A%0A${encodeURIComponent(fixedMessage)}`;
         window.open(whatsappUrl, '_blank'); // Abre el enlace en una nueva ventana o pestaña
     }
 };
 
-const handleWhatsAppMessage1 = (number, responseText) => {
+const handleWhatsAppMessage1 = (number) => {
     if (userName) {
         const fixedMessage = "Solicitud de soporte: Estoy teniendo problemas con la aplicación o plataforma. (Describa el problema)";
-        const selectionsMessage = selections.join(', '); // Convertir las selecciones a un string
-        const responseMessage = responseText || "No hay respuesta específica.";
-        const whatsappUrl = `https://wa.me/${number}?text=Hola%20soy%20${encodeURIComponent(userName)}%0A%0A${encodeURIComponent(fixedMessage)}%0A%0A${encodeURIComponent('Mis selecciones fueron: ' + selectionsMessage)}%0A%0A${encodeURIComponent('Respuesta: ' + responseMessage)}`;
+        const whatsappUrl = `https://wa.me/${number}?text=Hola%20soy%20${encodeURIComponent(userName)}%0A%0A${encodeURIComponent(fixedMessage)}`;
         window.open(whatsappUrl, '_blank'); // Abre el enlace en una nueva ventana o pestaña
     }
 };

@@ -230,12 +230,12 @@ function generateSubMenu2(optionText) {
 
 function generateAsesorSubMenu() {
     return `
-        <button class="menu-button" onclick="handleSubOption('7111')">7.1.1 ¿Cómo ingreso a la plataforma?</button>
-        <button class="menu-button" onclick="handleSubOption('7112')">7.1.2 ¿Cómo crear una cuenta?</button>
-        <button class="menu-button" onclick="handleSubOption('7113')">7.1.3 ¿Cómo solicito un servicio para una nueva renta?</button>
-        <button class="menu-button" onclick="handleSubOption('7114')">7.1.4 ¿Qué datos necesito para dar de alta un nuevo trámite?</button>
-        <button class="menu-button" onclick="handleSubOption('7115')">7.1.5 ¿Cómo sé en qué estatus está mi trámite?</button>
-        <button class="menu-button" onclick="handleSubOption('7116')">7.1.6 Tengo dudas para avanzar en mi proceso, requiero asistencia.</button>
+        <button class="menu-button" onclick="handleSubOption('711')">7.1.1 ¿Cómo ingreso a la plataforma?</button>
+        <button class="menu-button" onclick="handleSubOption('712')">7.1.2 ¿Cómo crear una cuenta?</button>
+        <button class="menu-button" onclick="handleSubOption('713')">7.1.3 ¿Cómo solicito un servicio para una nueva renta?</button>
+        <button class="menu-button" onclick="handleSubOption('714')">7.1.4 ¿Qué datos necesito para dar de alta un nuevo trámite?</button>
+        <button class="menu-button" onclick="handleSubOption('715')">7.1.5 ¿Cómo sé en qué estatus está mi trámite?</button>
+        <button class="menu-button" onclick="handleWhatsAppMessage1('5643147054')">7.1.6 Tengo dudas para avanzar en mi proceso, requiero asistencia.</button>
         <button class="menu-button" onclick="showWhatsAppOptions()">7.1.7 Enviar mensaje por WhatsApp</button>
         <button class="menu-button" onclick="goBack()">Regresar</button>
     `;
@@ -243,12 +243,12 @@ function generateAsesorSubMenu() {
 
 function generatePropietarioSubMenu() {
     return `
-        <button class="menu-button" onclick="handleSubOption('7211')">7.2.1 ¿Cómo ingreso a la plataforma?</button>
-        <button class="menu-button" onclick="handleSubOption('7212')">7.2.2 ¿Cómo crear una cuenta?</button>
-        <button class="menu-button" onclick="handleSubOption('7213')">7.2.3 ¿Cuáles son los documentos que necesito para hacer mi trámite?</button>
-        <button class="menu-button" onclick="handleSubOption('7214')">7.2.4 ¿Cómo debo subir mis documentos?</button>
-        <button class="menu-button" onclick="handleSubOption('7215')">7.2.5 ¿Cómo sé en qué estatus está mi trámite?</button>
-        <button class="menu-button" onclick="handleSubOption('7216')">7.2.6 Tengo dudas para avanzar en mi proceso, requiero asistencia.</button>
+        <button class="menu-button" onclick="handleSubOption('721')">7.2.1 ¿Cómo ingreso a la plataforma?</button>
+        <button class="menu-button" onclick="handleSubOption('722')">7.2.2 ¿Cómo crear una cuenta?</button>
+        <button class="menu-button" onclick="handleSubOption('723')">7.2.3 ¿Cuáles son los documentos que necesito para hacer mi trámite?</button>
+        <button class="menu-button" onclick="handleSubOption('724')">7.2.4 ¿Cómo debo subir mis documentos?</button>
+        <button class="menu-button" onclick="handleSubOption('725')">7.2.5 ¿Cómo sé en qué estatus está mi trámite?</button>
+        <button class="menu-button" onclick="handleWhatsAppMessage1('5643147054')">7.2.6 Tengo dudas para avanzar en mi proceso, requiero asistencia.</button>
         <button class="menu-button" onclick="showWhatsAppOptions()">7.2.7 Enviar mensaje por WhatsApp</button>
         <button class="menu-button" onclick="goBack()">Regresar</button>
     `;
@@ -256,12 +256,12 @@ function generatePropietarioSubMenu() {
 
 function generateInquilinoSubMenu() {
     return `
-        <button class="menu-button" onclick="handleSubOption('7311')">7.3.1 ¿Cómo ingreso a la plataforma?</button>
-        <button class="menu-button" onclick="handleSubOption('7312')">7.3.2 ¿Cómo crear una cuenta?</button>
-        <button class="menu-button" onclick="handleSubOption('7313')">7.3.3 ¿Cuáles son los documentos que necesito para hacer mi trámite?</button>
-        <button class="menu-button" onclick="handleSubOption('7314')">7.3.4 ¿Cómo debo subir mis documentos?</button>
-        <button class="menu-button" onclick="handleSubOption('7315')">7.3.5 ¿Cómo sé en qué estatus está mi trámite?</button>
-        <button class="menu-button" onclick="handleSubOption('7316')">7.3.6 Tengo dudas para avanzar en mi proceso, requiero asistencia.</button>
+        <button class="menu-button" onclick="handleSubOption('731')">7.3.1 ¿Cómo ingreso a la plataforma?</button>
+        <button class="menu-button" onclick="handleSubOption('732')">7.3.2 ¿Cómo crear una cuenta?</button>
+        <button class="menu-button" onclick="handleSubOption('733')">7.3.3 ¿Cuáles son los documentos que necesito para hacer mi trámite?</button>
+        <button class="menu-button" onclick="handleSubOption('734')">7.3.4 ¿Cómo debo subir mis documentos?</button>
+        <button class="menu-button" onclick="handleSubOption('735')">7.3.5 ¿Cómo sé en qué estatus está mi trámite?</button>
+        <button class="menu-button" onclick="handleWhatsAppMessage1('5643147054')">7.3.6 Tengo dudas para avanzar en mi proceso, requiero asistencia.</button>
         <button class="menu-button" onclick="showWhatsAppOptions()">7.3.7 Enviar mensaje por WhatsApp</button>
         <button class="menu-button" onclick="goBack()">Regresar</button>
     `;
@@ -303,7 +303,7 @@ function handleSubOption(subOption) {
         case '11':
             response = `
     <div style="text-align: justify;">
-        Conoce aquí nuestros servicios.
+        Conoce aquí nuestros servicios.<br>
         <a href="CHATBOOT/Brochure Arrenda Protect 2024.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
             Ver lista de servicios
         </a>
@@ -315,7 +315,7 @@ function handleSubOption(subOption) {
         case '12':
             response = `
     <div style="text-align: justify;">
-        Conoce nuestros precios.
+        Conoce nuestros precios. <br>
         <a href="CHATBOOT/Lista de Servicios Arrenda Protect.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
             Ver costos
         </a>
@@ -327,8 +327,8 @@ function handleSubOption(subOption) {
         case '13':
             response = `
             <div style="text-align: justify;">
-                Conoce nuestras coberturas legales.
-                <a href="CHATBOOT/Coberturas Arrenda Protect.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
+                Conoce nuestras coberturas legales. <br>
+                <a href="CHATBOOT/1.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
                     Ver coberturas
                 </a>
             </div>`;
@@ -353,17 +353,17 @@ function handleSubOption(subOption) {
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
-        case '16':
-            response = `
-                <div style="text-align: justify;">
-                    En Arrenda Protect te damos la posibilidad de firmar de manera presencial 
-                    <strong style="font-size: smaller;">*tu contrato de lunes a domingo (aplica cargos extras para horarios especiales)</strong> 
-                    y también contamos con plataforma para firmar electrónicamente con certificación conforme a la NOM-151 y generación de archivo Blockchain para evitar cualquier alteración posterior a la firma.<br>
-                    <strong style="font-size: smaller;">*Deberán presentarse todos los firmantes a la cita. En caso de recabación de firmas individuales se podrán agendar con costo extra.</strong>
-                </div>`;
-            buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-            break;
-        
+            case '16':
+    response = `
+<div style="text-align: justify;">
+    En Arrenda Protect te damos la posibilidad de firmar de manera presencial 
+    tu contrato de lunes a domingo (aplica cargos extras para horarios especiales) 
+    y también contamos con plataforma para firmar electrónicamente con certificación conforme a la NOM-151 y generación de archivo Blockchain para evitar cualquier alteración posterior a la firma.<br>
+    <br> *Deberán presentarse todos los firmantes a la cita. En caso de recabación de firmas individuales se podrán agendar con costo extra.
+</div>`;
+    buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+    break;
+            
         case '17':
             response = `
     <div style="text-align: justify;">
@@ -379,7 +379,7 @@ function handleSubOption(subOption) {
     response = `
         <div style="text-align: justify;">
             Todos la información y documentos que recibimos son utilizados estrictamente para los procesos de otorgamiento de nuestros servicios y están resguardados bajo nuestro aviso de privacidad que puedes consultar en. 
-            <div style="margin-top: 10px;">
+            <div style="margin-top: 10px;"> <br>
                 <a href="CHATBOOT/AVISO DE PRIVACIDAD ARRENDA PROTECT.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
                     Ver Aviso de Privacidad
                 </a>
@@ -420,17 +420,17 @@ function handleSubOption(subOption) {
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
-        case '26':
-            response = `
-                <div style="text-align: justify;">
-                    Al adquirir una póliza jurídica de arrendamiento, obtienes una serie de beneficios que brindan seguridad y tranquilidad tanto para el arrendador como para el arrendatario.<br>
-                    <strong style="font-size: smaller;">*Prevención de riesgos</strong><br>
-                    <strong style="font-size: smaller;">*Contratos seguros y personalizados</strong><br>
-                    <strong style="font-size: smaller;">*Mediación para solución de controversias</strong><br>
-                    <strong style="font-size: smaller;">*Cobertura legal ante incumplimiento de la contraparte</strong><br>
-                </div>`;
-            buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-            break;
+            case '26':
+                response = `
+            <div style="text-align: justify;">
+                Al adquirir una póliza jurídica de arrendamiento, obtienes una serie de beneficios que brindan seguridad y tranquilidad tanto para el arrendador como para el arrendatario.<br>
+                *Prevención de riesgos<br>
+                *Contratos seguros y personalizados<br>
+                *Mediación para solución de controversias<br>
+                *Cobertura legal ante incumplimiento de la contraparte<br>
+            </div>`;
+                buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+                break;
         
         case '27':
             response = `
@@ -500,6 +500,7 @@ function handleSubOption(subOption) {
             response = `
                 <div style="text-align: justify;">
                     El proceso de renovación implica la firma de un nuevo contrato y la validación de documentos necesarios. Para más detalles.
+                   <br>
                     <a href="CHATBOOT/PROCESO RENOVACION ARRENDA PROTECT.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
                         Ver Proceso de Renovación
                     </a>
@@ -522,25 +523,24 @@ function handleSubOption(subOption) {
             case '43':
                 response = `
                     <div style="text-align: justify;">
-                        El precio de la renovación de la póliza se calcula de acuerdo al precio de lista menos el descuento aplicable de acuerdo a nuestro programa de lealtad. Consulta nuestro programa en 
-                        <a href="Lista de Servicios Arrenda Protect.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
-                            Ver Lista de Servicios
-                        </a> para más información.
+                        El precio de la renovación de la póliza se calcula de acuerdo al precio de lista menos el descuento aplicable de acuerdo a nuestro programa de lealtad. Consulta nuestro programa en para más información.
+                       <br> <a href="CHATBOOT/Programa_Lealtad _rotect.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
+                            Ver programa de lealtad
+                        </a> 
                     </div>`;
                 buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
                 break;
         
-        case '44':
-            response = `
-    <div style="text-align: justify;">
-        En Arrenda Protect te damos la posibilidad de firmar de manera presencial 
-        <strong style="font-size: smaller;">*tu contrato de lunes a domingo (aplica cargos extras para horarios especiales)</strong> 
-        y también contamos con plataforma para firmar electrónicamente con certificación conforme a la NOM-151 y generación de archivo Blockchain para evitar cualquier alteración posterior a la firma.<br>
-        <strong style="font-size: smaller;">*Deberán presentarse todos los firmantes a la cita. En caso de recabación de firmas individuales se podrán agendar con costo extra.</strong>
-    </div>`;
-
-            buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-            break;
+                case '44':
+                    response = `
+                <div style="text-align: justify;">
+                    En Arrenda Protect te damos la posibilidad de firmar de manera presencial 
+                    tu contrato de lunes a domingo (aplica cargos extras para horarios especiales) 
+                    y también contamos con plataforma para firmar electrónicamente con certificación conforme a la NOM-151 y generación de archivo Blockchain para evitar cualquier alteración posterior a la firma.<br>
+                    <br>*Deberán presentarse todos los firmantes a la cita. En caso de recabación de firmas individuales se podrán agendar con costo extra.
+                </div>`;
+                    buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+                    break;
         
 
     //seccion 5
@@ -624,27 +624,26 @@ case '65':
             response = `
                 <div style="text-align: justify;">
                     Ingresa a la siguiente liga: 
-                    <a href="https://app.arrendaprotect.com.mx/" target="_blank">https://app.arrendaprotect.com.mx/</a>
+                   <br> <a href="https://app.arrendaprotect.com.mx/" target="_blank">ArrendaApp</a>
                 </div>`;
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
         
-        case '712':
-            response = `
-                <div style="text-align: justify;">
-                    Video tutorial ### (por elaborarse cuando la plataforma tenga la versión final). <br>
-                    Importante: debes revisar que tus datos de contacto sean correctos, ya que en caso de error no recibirás correctamente las notificaciones del avance del trámite.
-                </div>`;
-            buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-            break;
-        
-        case '713':
-            response = `
-                <div style="text-align: justify;">
-                    Video tutorial  <a href="https://www.youtube.com/@ArrendaProtect" target="_blank">@ArrendaProtect</a>.
-                </div>`;
-            buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-            break;
+            case '712':
+                response = `
+                    <div style="text-align: justify;">
+                        Estamos trabajando en material de apoyo para tus dudas.
+                            </div>`;
+                buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+                break;
+            
+                case '713':
+                    response = `
+                        <div style="text-align: justify;">
+                            Estamos trabajando en material de apoyo para tus dudas.
+                        </div>`;
+                    buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+                    break;
         
         case '714':
             response = `
@@ -662,9 +661,9 @@ case '65':
         case '715':
             response = `
                 <div style="text-align: justify;">
-                    De acuerdo a la configuración de tu cuenta, elegiste un medio de notificación (correo o WhatsApp) en el que la plataforma te irá notificando de los avances de tu trámite o puedes iniciar sesión en tu cuenta 
-                    <a href="https://app.arrendaprotect.com.mx/asesor/iniciarSesion" target="_blank">https://app.arrendaprotect.com.mx/asesor/iniciarSesion</a> 
-                    e ingresar a la renta para conocer su estatus.
+                    De acuerdo a la configuración de tu cuenta, elegiste un medio de notificación (correo o WhatsApp) en el que la plataforma te irá notificando de los avances de tu trámite o puedes iniciar sesión en tu cuenta e ingresar a la renta para conocer su estatus.
+                 <br>   <a href="https://app.arrendaprotect.com.mx/asesor/iniciarSesion" target="_blank">ArrendaApp</a> 
+                    
                 </div>`;
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
@@ -685,7 +684,7 @@ case '65':
             response = `
                 <div style="text-align: justify;">
                     Ingresa a la siguiente liga: 
-                    <a href="https://app.arrendaprotect.com.mx/" target="_blank">https://app.arrendaprotect.com.mx/</a>
+                   <br> <a href="https://app.arrendaprotect.com.mx/" target="_blank">ArrendaApp</a>
                 </div>`;
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
@@ -703,7 +702,7 @@ case '65':
                 response = `
                     <div style="text-align: justify;">
                         Aquí tienes los requisitos. <br>
-                        <a href="CHATBOOT/Requisitos Arrendador.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
+                      <br>  <a href="CHATBOOT/Requisitos Arrendador.pdf" target="_blank" style="display: inline-block; padding: 10px; border-radius: 8px; background-color: #f0f0f0; text-align: center;">
                             Ver Requisitos
                         </a>
                     </div>`;
@@ -716,9 +715,6 @@ case '65':
                     Se necesitan subir los siguientes documentos: <br>
                     +Identificación oficial vigente (INE o pasaporte) es muy importante que se envíe en formato imagen (foto) sin flash, sin sombras en fondo de cualquier color menos blanco y si recortar la fotografía <br>
                     +Comprobante de domicilio del inmueble a arrendar a nombre del arrendador en formato PDF. 
-                    Si tienes duda de tu registro ingresa a 
-                    <a href="https://www.youtube.com/@ArrendaProtect" target="_blank">www.youtube.com/@ArrendaProtect</a> 
-                    y consulta el tutorial de expediente del arrendador.
                 </div>`;
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
@@ -726,20 +722,20 @@ case '65':
         case '725':
             response = `
                 <div style="text-align: justify;">
-                    De acuerdo a la configuración de tu cuenta, elegiste un medio de notificación (correo o WhatsApp) en el que la plataforma te irá notificando de los avances de tu trámite o puedes iniciar sesión en tu cuenta 
-                    <a href="https://app.arrendaprotect.com.mx/propietario/iniciarSesion" target="_blank">https://app.arrendaprotect.com.mx/propietario/iniciarSesion</a> 
-                    e ingresar a la renta para conocer su estatus.
+                    De acuerdo a la configuración de tu cuenta, elegiste un medio de notificación (correo o WhatsApp) en el que la plataforma te irá notificando de los avances de tu trámite o puedes iniciar sesión en tu cuenta e ingresar a la renta para conocer su estatus.
+                  <br>  <a href="https://app.arrendaprotect.com.mx/propietario/iniciarSesion" target="_blank">ArrendaApp</a> 
+                    
                 </div>`;
             buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
             break;
-        
-        case '726':
-            response = `
-            <div style="text-align: justify;">
-                Estamos trabajando en material de apoyo para tus dudas.
-            </div>`;
-            buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
-            break;
+
+            case '726':
+                response = `
+                    <div style="text-align: justify;">
+                        Estamos trabajando en material de apoyo para tus dudas.
+                    </div>`;
+                buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
+                break;
         
         //seccion 73
 
@@ -747,7 +743,7 @@ case '65':
     response = `
         <div style="text-align: justify;">
             Ingresa a la siguiente liga: 
-            <a href="https://app.arrendaprotect.com.mx/" target="_blank">https://app.arrendaprotect.com.mx/</a>
+          <br>  <a href="https://app.arrendaprotect.com.mx/" target="_blank">ArrendaApp/</a>
         </div>`;
     buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
     break;
@@ -789,9 +785,8 @@ case '734':
             +Si eres extranjero, residencia TEMPORAL o PERMANENTE vigente formato PDF <br>
             +Comprobante de ingresos de los 3 últimos meses (nómina o estados de cuenta) tus ingresos netos deben cubrir por lo menos 3 veces el monto de renta que deseas contratar, formato PDF <br>
             +Constancia laboral (aplica sólo para empleados) formato PDF. 
-            Si tienes duda de tu registro ingresa a 
-            <a href="https://www.youtube.com/@ArrendaProtect" target="_blank">www.youtube.com/@ArrendaProtect</a> 
-            y consulta el tutorial de expediente del arrendatario.
+            
+            
         </div>`;
     buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
     break;
@@ -799,9 +794,9 @@ case '734':
 case '735':
     response = `
         <div style="text-align: justify;">
-            De acuerdo a la configuración de tu cuenta, elegiste un medio de notificación (correo o WhatsApp) en el que la plataforma te irá notificando de los avances de tu trámite o puedes iniciar sesión en tu cuenta 
-            <a href="https://app.arrendaprotect.com.mx/inquilino/iniciarSesion" target="_blank">https://app.arrendaprotect.com.mx/inquilino/iniciarSesion</a> 
-            e ingresar a la renta para conocer su estatus.
+            De acuerdo a la configuración de tu cuenta, elegiste un medio de notificación (correo o WhatsApp) en el que la plataforma te irá notificando de los avances de tu trámite o puedes iniciar sesión en tu cuenta e ingresar a la renta para conocer su estatus.
+         <br>   <a href="https://app.arrendaprotect.com.mx/inquilino/iniciarSesion" target="_blank">ArrendaApp</a> 
+           
         </div>`;
     buttonsHtml = `<button class="menu-button" onclick="goBack()">Regresar</button>`;
     break;
@@ -830,7 +825,9 @@ case '736':
 const previousScrollHeight = chatBody.scrollHeight;
 
 // Mostrar la respuesta en el chat
-chatBody.innerHTML += `<div class="chat-message bot-message"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /> </strong> ${response}</div>`;
+chatBody.innerHTML += `<div class="chat-message bot-message small-text"><strong><img src="CHATBOOT/eva.png" alt="Eva" class="bot-image" /></strong> ${response}</div>`;
+
+
 chatBody.innerHTML += buttonsHtml; // Agregar el HTML de los botones
 
 // Calcular la posición de desplazamiento deseada

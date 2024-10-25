@@ -14,6 +14,10 @@ body {
     padding: 0;
 }
 
+.small-text {
+    font-size: 0.8em; /* O el tamaño que prefieras */
+}
+
 #chat-icon,
 .chatbot-toggler {
     position: fixed;
