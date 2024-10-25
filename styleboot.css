@@ -1,0 +1,167 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#chat-icon,
+.chatbot-toggler {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    outline: none;
+    border: none;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #003366;
+    color: white;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.bot-image {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: 30px; /* Ajusta el tamaño según sea necesario */
+    vertical-align: middle; /* Alinea la imagen con el texto */
+    margin-right: 5px; /* Espacio entre la imagen y el texto */
+}
+
+#chatbot {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: calc(100% - 40px); /* Se adapta al 100% menos el margen */
+    max-width: 400px; /* Ancho máximo para pantallas grandes */
+    height: 500px; /* Altura inicial */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.chat-header {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-body {
+    height: calc(100% - 100px); /* Ajustar altura según el encabezado y la entrada */
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    #chatbot {
+        width: calc(100% - 40px); /* Asegura que el ancho sea responsivo en móviles */
+        height: 400px; /* Ajustar altura para pantallas pequeñas */
+    }
+}
+
+@media (max-height: 600px) {
+    #chatbot {
+        height: 300px; /* Ajustar altura para pantallas más pequeñas */
+    }
+
+    .chat-body {
+        height: calc(100% - 80px); /* Ajustar para una mejor visualización */
+    }
+
+    .chat-input {
+        padding: 5px; /* Reducir el padding en la entrada */
+    }
+
+    .chat-input input {
+        padding: 3px; /* Reducir el padding en el input */
+    }
+}
+
+.chat-message {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    color: #003366; /* Azul oscuro para los mensajes */
+    transition: background-color 0.3s; /* Suavizar la transición al cambiar de color */
+}
+
+.user-message {
+    justify-content: flex-end;
+    color: #003366; /* Azul oscuro para el mensaje del usuario */
+}
+
+.bot-message {
+    justify-content: flex-start;
+    color: #003366; /* Azul oscuro para el mensaje del bot */
+}
+
+.bot-message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-message {
+    color: #28a745; /* Color para el texto del usuario */
+}
+
+.menu-button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: calc(100% - 12px);
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #0056b3;
+}
+
+/* Efecto al pasar el mouse sobre los mensajes */
+.chat-message:hover {
+    background-color: rgba(0, 51, 102, 0.1); /* Fondo más claro al pasar el mouse */
+}
